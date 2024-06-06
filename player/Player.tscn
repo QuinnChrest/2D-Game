@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://d08kx7ltpuil5"]
+[gd_scene load_steps=33 format=3 uid="uid://d08kx7ltpuil5"]
 
+[ext_resource type="Script" path="res://player/Player.gd" id="1_2evc2"]
 [ext_resource type="Texture2D" uid="uid://ba38nff0s0pt1" path="res://art/Orc/Orc-Attack01.png" id="1_wddkl"]
 [ext_resource type="Texture2D" uid="uid://b81phbeqxg2yv" path="res://art/Orc/Orc-Idle.png" id="2_tts43"]
 [ext_resource type="Texture2D" uid="uid://brw1y63oawkg" path="res://art/Orc/Orc-Walk.png" id="3_direc"]
@@ -49,6 +50,30 @@ atlas = ExtResource("2_tts43")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sb2jr"]
+atlas = ExtResource("2_tts43")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14g7q"]
+atlas = ExtResource("2_tts43")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2grfu"]
+atlas = ExtResource("2_tts43")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgvxk"]
+atlas = ExtResource("2_tts43")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x06gq"]
+atlas = ExtResource("2_tts43")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpd1w"]
+atlas = ExtResource("2_tts43")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwfb5"]
 atlas = ExtResource("2_tts43")
 region = Rect2(500, 0, 100, 100)
 
@@ -127,6 +152,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sb2jr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14g7q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2grfu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgvxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x06gq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpd1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwfb5")
 }],
 "loop": true,
 "name": &"Idle",
@@ -165,13 +208,14 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnjp2"]
 
 [node name="Player" type="Area2D"]
+position = Vector2(43, 48)
+script = ExtResource("1_2evc2")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1bf6m")
-animation = &"Attack"
-frame_progress = 0.750007
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.125, 1.215)
