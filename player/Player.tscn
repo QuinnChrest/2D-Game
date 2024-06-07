@@ -132,7 +132,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
-"speed": 6.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -173,7 +173,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 6.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -206,6 +206,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnjp2"]
+radius = 4.44445
+height = 13.1687
 
 [node name="Player" type="Area2D"]
 position = Vector2(43, 48)
@@ -213,9 +215,9 @@ script = ExtResource("1_2evc2")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_1bf6m")
 animation = &"Idle"
+frame_progress = 0.782098
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.125, 1.215)
