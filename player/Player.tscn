@@ -209,7 +209,7 @@ animations = [{
 radius = 4.44445
 height = 13.1687
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(43, 48)
 script = ExtResource("1_2evc2")
 metadata/_edit_group_ = true
@@ -222,5 +222,3 @@ frame_progress = 0.782098
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.125, 1.215)
 shape = SubResource("CapsuleShape2D_mnjp2")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
