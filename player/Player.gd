@@ -1,11 +1,10 @@
 extends CharacterBody2D
 signal hit
 
-const GRAVITY = 400.0
+const GRAVITY = 1000.0
 const WALK_SPEED = 100
-const VERTICAL = -200
+const VERTICAL = -325
 
-@export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
@@ -36,6 +35,9 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.animation = "Idle"
+	
+	if velocity.y != 0:
+		$AnimatedSprite2D.animation = "Default"
 		
 	
 
