@@ -35,9 +35,6 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.animation = "Idle"
-	
-	if velocity.y != 0:
-		$AnimatedSprite2D.animation = "Default"
 		
 	
 
